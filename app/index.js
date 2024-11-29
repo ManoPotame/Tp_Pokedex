@@ -1,4 +1,3 @@
-
 /**
 * Serveur Backend Pokedex
 */
@@ -8,7 +7,7 @@ const POKEDEX_SRC = "./DATA/pokedex.json";
 // Définir l'emplacement des images
 const IMAGES_SRC = "./FILES/images";
 // Définir un port
-const PORT = 5001;
+const PORT = 5002;
 // ************************************************
 // Lancer un serveur express sur un port défini
 const fs = require('fs');
@@ -20,7 +19,7 @@ const app = express();
 // Lancement du serveur et attendre
 app.listen(
     PORT,
-    '127.0.0.1',
+    '0.0.0.0',
     () => {
         console.log('Server Pokedex is listening on ' + PORT);
     }
@@ -112,3 +111,4 @@ app.get(
         }
     }
 )
+
