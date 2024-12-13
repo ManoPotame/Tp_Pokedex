@@ -2,3 +2,5 @@
 .DS_STORE
 node_modules
 .vscode
+index.js
+app/index.js

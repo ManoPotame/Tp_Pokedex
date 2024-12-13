@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "dde99aa2-f29f-4e4c-a465-1d242ee4ebaa",
+		"name": "Pokemon",
+		"description": "Cette collection postman enregistre quatre routes liées à l'api Pokedex.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39902662"
+	},
+	"item": [
+		{
+			"name": "Pokemon_Aleatoire",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "172.16.195.254:5002/pokemon/hasard",
+					"host": [
+						"172",
+						"16",
+						"195",
+						"254"
+					],
+					"port": "5002",
+					"path": [
+						"pokemon",
+						"hasard"
+					]
+				},
+				"description": "Une fois la requête exécutée, fait apparaitre un pokemon aléatoire."
+			},
+			"response": []
+		},
+		{
+			"name": "Nom_Pokemon_(anglais)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Une fois la requête exécutée, fait apparaitre le pokemon dont le nom anglais à été saisi dans l'url."
+			},
+			"response": []
+		},
+		{
+			"name": "Type_Pokemon_(anglais)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Une fois la requête exécutée, fait apparaitre le pokemon dont le type en anglais à été saisi dans l'url."
+			},
+			"response": []
+		},
+		{
+			"name": "Id_Pokemon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Une fois la requête exécutée, fait apparaitre le pokemon dont l'id à été saisi dans l'url."
+			},
+			"response": []
+		}
+	]
+}

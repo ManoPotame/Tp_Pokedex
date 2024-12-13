@@ -74,7 +74,7 @@ app.get(
         let data = fs.readFileSync(POKEDEX_SRC);
         let pokedex = JSON.parse(data);
         for (let i = 0; i < pokedex.length; ++i) {
-            const element = pokedex[i];
+            //const element = pokedex[i];
             if (pokedex[i].name.english === name) {
                 return res.send(pokedex[i]);
             }
@@ -82,6 +82,20 @@ app.get(
 
         // Si aucun Pokémon n'est trouvé avec ce nom
         res.status(404).send({ error: "Pokemon not found" });
+    }
+)
+
+app.get(
+    '/pokemon/:name([a-zA-Z]+)', (req, res) => {
+        const name = req.params.name;
+        let data = fs.readFileSync(POKEDEX_SRC);
+        let pokedex = JSON.parse(data);
+        for (let i = 0; i < pokedex.length; ++i) {
+            const element = pokedex[i];
+            if (pokedex[i].name.english === name) {
+                return res.send(pokedex[i]);
+            }
+        }
     }
 )
 
@@ -111,4 +125,3 @@ app.get(
         }
     }
 )
-
